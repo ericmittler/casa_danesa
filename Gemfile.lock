@@ -6,6 +6,13 @@ GIT
       jquery-rails
       rails (>= 3.1)
 
+GIT
+  remote: https://github.com/bradphelan/jasminerice.git
+  revision: 091349c27343bfa728b8e5745675f9ddbb7d9699
+  specs:
+    jasminerice (0.1.0)
+      coffee-rails
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -114,9 +121,7 @@ GEM
       railties (>= 4.0.1)
     hike (1.2.3)
     i18n (0.6.9)
-    jasminerice (0.0.10)
-      coffee-rails
-      haml
+    jasmine-jquery-rails (2.0.2)
     jbuilder (1.5.3)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
@@ -145,7 +150,6 @@ GEM
     mini_portile (0.5.2)
     minitest (4.7.5)
     multi_json (1.8.4)
-    mysql2 (0.3.15)
     net-scp (1.1.2)
       net-ssh (>= 2.6.5)
     net-ssh (2.8.0)
@@ -153,6 +157,7 @@ GEM
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
     orm_adapter (0.5.0)
+    pg (0.17.1)
     polyglot (0.3.3)
     pry (0.9.12.6)
       coderay (~> 1.0)
@@ -265,13 +270,15 @@ DEPENDENCIES
   guard-jasmine
   guard-rspec
   haml-rails
-  jasminerice
+  jasmine-jquery-rails
+  jasminerice!
   jbuilder (~> 1.2)
   jquery-fileupload-rails
   jquery-rails (~> 2.1.4)
   jquery-ui-rails
   launchy
-  mysql2
+  nokogiri
+  pg
   rack_session_access
   rails (= 4.0.1)
   rails_12factor

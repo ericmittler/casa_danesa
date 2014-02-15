@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
 gem 'rails_12factor', group: :production
 gem 'pg'
@@ -32,6 +31,7 @@ end
 
 group :test, :development do
   gem 'rspec-rails', '~> 2.0'
+  gem 'nokogiri'
   gem 'terminal-notifier-guard'
   gem 'rb-fsevent', '~> 0.9.1'
   gem 'guard'
@@ -44,6 +44,10 @@ group :test, :development do
   gem 'rack_session_access'
   gem 'shoulda-matchers'
   gem 'factory_girl_rails', '~> 4.0'
-  gem 'jasminerice'
+  gem "jasminerice", :git => 'https://github.com/bradphelan/jasminerice.git'
+  gem 'jasmine-jquery-rails'
   gem 'guard-jasmine'
 end
+
+
+ruby '2.0.0'
