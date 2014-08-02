@@ -8,3 +8,6 @@ Version 0.1
 
  * Eric, you created a separate github key for this that's in your .ssh directory.
  * There is a routes problem with jasminerice that you punted on. See https://github.com/rails/rails/issues/10100
+ * switched to using unicorn for Heroku therefore start the local webserver with the command:
+
+  foreman start

@@ -1,0 +1,17 @@
+
+%p
+  %b Title
+  = @blog_post.title
+%p
+  %b Draft body
+  = @blog_post.draft_body
+%p
+  %b Published body
+  = @blog_post.published_body
+%p
+  %b Published at
+  = @blog_post.published_at
+
+= link_to 'Edit', edit_blog_post_path(@blog_post)
+\|
+= link_to 'Back', blog_posts_path

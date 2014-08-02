@@ -1,0 +1,25 @@
+= form_for @blog_post do |f|
+  - if @blog_post.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@blog_post.errors.count, "error")} prohibited this blog_post from being saved:"
+      %ul
+        - @blog_post.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :draft_body
+    = f.text_field :draft_body
+  .field
+    = f.label :published_at
+    = @blog_post.published_at
+  .field
+    = f.label :updated_at
+    = @blog_post.updated_at
+  .field
+    = f.label :created_at
+    = @blog_post.created_at
+  .actions
+    = f.submit 'Save'
